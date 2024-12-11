@@ -4,8 +4,6 @@ from prettytable import PrettyTable
 
 
 def adicionar_cliente(): 
-
-    os.system('cls')
         
     conn = sqlite3.connect("C:/Python/Passagens_aerea/Passagens_aerea/Banco_dados.db")
     cursor = conn.cursor()
