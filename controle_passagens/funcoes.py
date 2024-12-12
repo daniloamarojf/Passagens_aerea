@@ -9,12 +9,21 @@ def cabecalho(nome_cabecalho):
 
 def crud():
         
-    print('1 - Adicionar\n')
-    print('2 - Alterar dados\n')  
-    print('3 - Remover \n')  
-    print('4 - Visualizar \n')
-        
+    print('1 - Adicionar')
+    print('2 - Alterar dados')  
+    print('3 - Remover')  
+    print('4 - Visualizar')
+    
+def crud_tabelas():
+    print('::::  ADMINISTRAÇÃO DE TABELAS  ::::\n')
+    print('1 - Cliente')
+    print('2 - Voo')
+    print('3 - Aeroporto\n')
+    
+    
   
+        
+crud_tabelas()
 
         
     

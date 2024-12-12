@@ -16,20 +16,27 @@ def alterar_cliente():
     if cliente:
         print()
         nome_cliente = cliente[0]
-        print(f'Pode atualizar os dados de {nome_cliente} agora\n')
-        novo_nome = input('Nome: ')
-        novo_cpf = input('CPF: ')
-        novo_telefone = input('Telefone:')
-        nova_data_nascimento = input('Data de nascimento: ')
+        opcao_alterar = input(f'Deseja realmente alter o cliente: {nome_cliente} ? (1 - Sim/ 2 - Não): ')
         
-        dados_cliente = (novo_nome, novo_cpf,novo_telefone, nova_data_nascimento, id_cliente)
+        if opcao_alterar == '1':
+            novo_nome = input('Nome: ')
+            novo_cpf = input('CPF: ')
+            novo_telefone = input('Telefone:')
+            nova_data_nascimento = input('Data de nascimento: ')
         
-        cursor.execute('UPDATE clientes SET nome = ?, cpf = ?, telefone = ?, data_nascimento = ? WHERE id_cliente = ?',
-                   (dados_cliente))
+            dados_cliente = (novo_nome, novo_cpf,novo_telefone, nova_data_nascimento, id_cliente)
         
-        conn.commit()
-        print()
-        input('Dados atualizados com sucesso. Pressione enter!')
-        conn.close()
+            cursor.execute('UPDATE clientes SET nome = ?, cpf = ?, telefone = ?, data_nascimento = ? WHERE id_cliente = ?',
+                (dados_cliente))
+        
+            conn.commit()
+            print()
+            input('Deseja continuar alterando Clientes? Pressione enter!')
+            conn.close()    
+        elif opcao_alterar == '2':
+            input('Cliente NÃO atualizado. Pressione enter!')
+        else:
+            input('Opção inválida!')
+        
     else:
-        print(f'Cliente com ID {id_cliente} não encontardo')
+        input(f'Cliente com ID {id_cliente} não encontardo. Pressione enter!')
