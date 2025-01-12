@@ -47,12 +47,12 @@ def alterar_voo():
     conn = sqlite3.connect("C:/Python/Passagens_aerea/Passagens_aerea/Banco_dados.db")
     cursor = conn.cursor()
         
-    id_cliente = input('Qual a identificação do Cliente a ser ALTERADO?: ')
+    id_voo = input('Qual a identificação do Voo a ser ALTERADO?: ')
         
-    cursor.execute('SELECT nome FROM clientes WHERE id_cliente = ?', (id_cliente))
-    cliente = cursor.fetchone()
+    cursor.execute('SELECT nome FROM voo WHERE id_voo = ?', (id_voo))
+    voo = cursor.fetchone()
         
-    if cliente:
+    if voo:
         print()
         nome_cliente = cliente[0]
         opcao_alterar = input(f'Deseja realmente alter o cliente: {nome_cliente} ? (1 - Sim/ 2 - Não): ')

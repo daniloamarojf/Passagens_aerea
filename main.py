@@ -1,7 +1,7 @@
 import sqlite3
 import os
 from prettytable import PrettyTable
-from controle_passagens.tabelas import criar_clientes
+from controle_passagens.tabelas import criar_clientes, criar_voo, criar_aeroporto
 from controle_passagens.funcoes import cabecalho, crud, crud_tabelas
 from controle_passagens.adicionar import adicionar_cliente
 from controle_passagens.alterar import alterar_cliente
@@ -9,6 +9,8 @@ from controle_passagens.remover import remover_cliente
 from controle_passagens.visualizar import visualizar_cliente
 
 criar_clientes()
+criar_voo()
+criar_aeroporto()
 
 os.system('cls')
 while True:

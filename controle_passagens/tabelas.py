@@ -19,3 +19,40 @@ def criar_clientes():
     ''')
     conn.commit()
     conn.close()
+
+def criar_voo():
+    
+    conn = sqlite3.connect("C:/Python/Passagens_aerea/Passagens_aerea/Banco_dados.db")
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS voo (
+            id_voo INTEGER PRIMARY KEY AUTOINCREMENT,
+            numero_voo VARCHAR(10) UNIQUE NOT NULL,
+            origem INT NOT NULL,
+            destino INT NOT NULL,
+            data_partida TIMESTAMP NOT NULL,
+            data_chegada TIMESTAMP NOT NULL,
+            duracao INTERVAL,
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+def criar_aeroporto():
+    
+    conn = sqlite3.connect("C:/Python/Passagens_aerea/Passagens_aerea/Banco_dados.db")
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS aeroporto (
+            id_aeroporto INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome_aeroporto VARCHAR(100) NOT NULL,
+            codigo_iata CHAR(3) UNIQUE NOT NULL,
+            cidade VARCHAR(50) NOT NULL,
+            pais VARCHAR(50) NOT NULL,
+        )
+    ''')
+    conn.commit()
+    conn.close()
+    
