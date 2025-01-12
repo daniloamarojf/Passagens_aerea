@@ -37,7 +37,57 @@ while True:
             cabecalho('VISUALIZAR CLIENTE')
             visualizar_cliente()
         else:
-            input('Opção inválida! Pressione enter.')    
+            input('Opção inválida! Pressione enter.') 
+            
+    elif opcao == '2':
+        os.system('cls')
+        cabecalho('VOO')
+        crud()
+        opcao = input('=====> Escolha a opção: ')
+        
+        
+        if opcao == '1':
+            cabecalho('ADICIONAR VOO')
+            adicionar_voo()
+        elif opcao == '2':
+            cabecalho('ALTERAR VOO')
+            alterar_voo()
+        elif opcao == '3':
+            cabecalho('REMOVER VOO')
+            remover_voo()
+        elif opcao == '4':
+            cabecalho('VISUALIZAR VOO')
+            visualizar_voo()
+        else:
+            input('Opção inválida! Pressione enter.') 
+            
+    elif opcao == '3':    
+        os.system('cls')
+        cabecalho('AEROPORTO')
+        crud()
+        opcao = input('=====> Escolha a opção: ')
+        
+        
+        if opcao == '1':
+            cabecalho('ADICIONAR AEROPORTO')
+            adicionar_aeroporto()
+        elif opcao == '2':
+            cabecalho('ALTERAR AEROPORTO')
+            alterar_aeroporto()
+        elif opcao == '3':
+            cabecalho('REMOVER AEROPORTO')
+            remover_aeroporto()
+        elif opcao == '4':
+            cabecalho('VISUALIZAR AEROPORTO')
+            visualizar_aeroporto()
+        else:
+            input('Opção inválida! Pressione enter.') 
+
+    else:
+        print('FIM')
+
+        
+        
             
             
 
