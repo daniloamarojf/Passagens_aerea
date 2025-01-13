@@ -5,7 +5,7 @@ from prettytable import PrettyTable
 
 def criar_clientes():
     
-    conn = sqlite3.connect("C:\Python\Passagens_Aereas\Passagens_aerea\Banco_dados.db")
+    conn = sqlite3.connect("C:\Repositorios\Passagens_aerea\Banco_dados.db")
     cursor = conn.cursor()
 
     cursor.execute('''
@@ -22,7 +22,7 @@ def criar_clientes():
 
 def criar_voo():
     
-    conn = sqlite3.connect("C:\Python\Passagens_Aereas\Passagens_aerea\Banco_dados.db")
+    conn = sqlite3.connect("C:\Repositorios\Passagens_aerea\Banco_dados.db")
     cursor = conn.cursor()
 
     cursor.execute('''
@@ -41,7 +41,7 @@ def criar_voo():
 
 def criar_aeroporto():
     
-    conn = sqlite3.connect("C:\Python\Passagens_Aereas\Passagens_aerea\Banco_dados.db")
+    conn = sqlite3.connect("C:\Repositorios\Passagens_aerea\Banco_dados.db")
     cursor = conn.cursor()
 
     cursor.execute('''
