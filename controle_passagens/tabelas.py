@@ -5,7 +5,7 @@ from prettytable import PrettyTable
 
 def criar_clientes():
     
-    conn = sqlite3.connect("C:/Python/Passagens_aerea/Passagens_aerea/Banco_dados.db")
+    conn = sqlite3.connect("C:\Python\Passagens_Aereas\Passagens_aerea\Banco_dados.db")
     cursor = conn.cursor()
 
     cursor.execute('''
@@ -22,7 +22,7 @@ def criar_clientes():
 
 def criar_voo():
     
-    conn = sqlite3.connect("C:/Python/Passagens_aerea/Passagens_aerea/Banco_dados.db")
+    conn = sqlite3.connect("C:\Python\Passagens_Aereas\Passagens_aerea\Banco_dados.db")
     cursor = conn.cursor()
 
     cursor.execute('''
@@ -33,7 +33,7 @@ def criar_voo():
             destino INT NOT NULL,
             data_partida TIMESTAMP NOT NULL,
             data_chegada TIMESTAMP NOT NULL,
-            duracao INTERVAL,
+            duracao INTEGER
         )
     ''')
     conn.commit()
@@ -41,7 +41,7 @@ def criar_voo():
 
 def criar_aeroporto():
     
-    conn = sqlite3.connect("C:/Python/Passagens_aerea/Passagens_aerea/Banco_dados.db")
+    conn = sqlite3.connect("C:\Python\Passagens_Aereas\Passagens_aerea\Banco_dados.db")
     cursor = conn.cursor()
 
     cursor.execute('''
@@ -50,7 +50,7 @@ def criar_aeroporto():
             nome_aeroporto VARCHAR(100) NOT NULL,
             codigo_iata CHAR(3) UNIQUE NOT NULL,
             cidade VARCHAR(50) NOT NULL,
-            pais VARCHAR(50) NOT NULL,
+            pais VARCHAR(50) NOT NULL
         )
     ''')
     conn.commit()

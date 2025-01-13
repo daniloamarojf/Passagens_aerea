@@ -3,10 +3,10 @@ import os
 from prettytable import PrettyTable
 from controle_passagens.tabelas import criar_clientes, criar_voo, criar_aeroporto
 from controle_passagens.funcoes import cabecalho, crud, crud_tabelas
-from controle_passagens.adicionar import adicionar_cliente
-from controle_passagens.alterar import alterar_cliente
-from controle_passagens.remover import remover_cliente
-from controle_passagens.visualizar import visualizar_cliente
+from controle_passagens.adicionar import adicionar_cliente, adicionar_voo, adicionar_aeroporto
+from controle_passagens.alterar import alterar_cliente, alterar_voo, alterar_aeroporto
+from controle_passagens.remover import remover_cliente, remover_voo, remover_aeroporto
+from controle_passagens.visualizar import visualizar_cliente, visualizar_voo, visualizar_aeroporto
 
 criar_clientes()
 criar_voo()
