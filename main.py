@@ -87,11 +87,8 @@ while True:
 
     else:
         print('FIM')
-        
-        print('Final feliz')
 
-
-        
+                
         
             
             
