@@ -27,16 +27,16 @@ def adicionar_voo():
     conn = sqlite3.connect("C:\Repositorios\Passagens_aerea\Banco_dados.db")
     cursor = conn.cursor()
         
-    nome = input('Nome cliente: ')
+    numero_voo = input('Numero do Voo: ')
     origem = input('Origem: ')
     destino = input('Destino: ')
     data_partida = input('Data de partida: ')
     data_chegada = input('Data de chegada: ')
     duracao = input('Duração: ')
         
-    dados_voo = (nome, origem, destino, data_partida, data_chegada, duracao)
+    dados_voo = (numero_voo, origem, destino, data_partida, data_chegada, duracao)
         
-    cursor.execute('INSERT INTO clientes (nome, origem, destino, data_partida, data_chegada, duracao) VALUES (?,?,?,?)', dados_voo)
+    cursor.execute('INSERT INTO voo (numero_voo, origem, destino, data_partida, data_chegada, duracao) VALUES (?,?,?,?,?,?)', dados_voo)
         
     conn.commit()
     print()
@@ -56,7 +56,7 @@ def adicionar_aeroporto():
         
     dados_aeroporto = (nome_aeroporto, codigo_iata, cidade, pais)
         
-    cursor.execute('INSERT INTO clientes (nome_aeroporto, codigo_iata, cidade, pais) VALUES (?,?,?,?)', dados_aeroporto)
+    cursor.execute('INSERT INTO aeroporto (nome_aeroporto, codigo_iata, cidade, pais) VALUES (?,?,?,?)', dados_aeroporto)
         
     conn.commit()
     print()

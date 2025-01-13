@@ -41,7 +41,7 @@ while True:
         else:
             input('Opção inválida! Pressione enter.') 
             
-    elif opcao == '2':
+    elif opcao_tabelas == '2':
         os.system('cls')
         cabecalho('VOO')
         crud()
@@ -63,7 +63,7 @@ while True:
         else:
             input('Opção inválida! Pressione enter.') 
             
-    elif opcao == '3':    
+    elif opcao_tabelas == '3':    
         os.system('cls')
         cabecalho('AEROPORTO')
         crud()
@@ -87,6 +87,8 @@ while True:
 
     else:
         print('FIM')
+        
+        fim 
 
         
         
